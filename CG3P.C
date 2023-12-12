@@ -1,0 +1,36 @@
+#include<graphics.h>
+#include<dos.h>
+#include<conio.h>
+void main()
+{
+ int gd= DETECT,gm,xcen,ycen;
+ initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+ textattr(BLACK<<8+WHITE);
+ xcen=getmaxx()/2;
+ ycen=getmaxy()/2;
+ circle(xcen,ycen,100);
+ delay(1500);
+ circle(xcen,ycen,80);
+ delay(1500);
+ circle(xcen,ycen,60);
+ delay(1500);
+ circle(xcen,ycen,40);
+ delay(1500);
+ circle(xcen,ycen,20);
+ delay(1500);
+ clrscr();
+ rectangle(xcen-100,ycen-50,xcen+100,ycen+50);
+ delay(1500);
+ clrscr();
+ rectangle(xcen-50,ycen-50,xcen+50,ycen+50);
+ delay(1500);
+ clrscr();
+ ellipse(xcen,ycen,0,360,100,50);
+ delay(1500);
+ clrscr();
+ line(xcen-100,ycen,xcen+100,ycen);
+ delay(1500);
+ clrscr();
+ getch();
+ closegraph();
+}
